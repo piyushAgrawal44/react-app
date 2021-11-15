@@ -16,6 +16,14 @@ function App() {
        <Navbar />
        
       <Switch>
+        <Route exact path="/react-app" render={()=>{
+           return(
+           <>
+            <h3 className="text-center my-4">Hello User</h3>
+            <Main />
+          </>)
+        }}>
+        </Route>
         <Route exact path="/" render={()=>{
            return(
            <>
