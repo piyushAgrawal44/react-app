@@ -3,6 +3,8 @@ import Navbar from "./myComponenets/navbar"; //jab rfc ka use krte hai to defult
 import Main from "./myComponenets/main";
 import Footer from "./myComponenets/footer";
 import About from "./myComponenets/about";
+import Navbar2 from "./myComponenets/navbar2";
+import Navbar3 from "./myComponenets/navbar3.js";
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,18 +15,29 @@ function App() {
   return (
  <>
     <Router>
-       <Navbar />
+       
        
       <Switch>
+        <Route exact path="/react-app">
+           <>
+           <Navbar />
+           <h3 className="text-center my-4">Hello User</h3>
+            <Main />
+          </>
+        </Route>
         <Route exact path="/">
            <>
+           <Navbar2 />
            <h3 className="text-center my-4">Hello User</h3>
             <Main />
           </>
         </Route>
 
         <Route exact path="/about">
+          <>
+          <Navbar3 />
           <About />
+          </>
         </Route>
 
       </Switch>

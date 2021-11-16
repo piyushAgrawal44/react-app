@@ -1,8 +1,17 @@
 import React from 'react'
 
 export default function main() {
+    var count=1;
     var click = () =>{
-        document.getElementById('firstdiv').innerText="welcom to my first react app";
+      
+        if (count===1) {
+            count=2;
+            document.getElementById('firstdiv').innerText="welcom to my first react app";
+        } 
+        else {
+            document.getElementById('firstdiv').innerText="";
+            count=1;
+        }
         
     }
     return (
